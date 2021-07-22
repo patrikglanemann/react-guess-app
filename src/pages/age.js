@@ -1,22 +1,31 @@
 import { useEffect, useState } from "react";
 
 export default function Age() {
-  const [list, setList] = useState();
+  const [result, setResult] = useState();
 
-  function handleClick() {
-    const url = "https://api.agify.io?name=patrik";
+  function handleSubmit(event) {
+    event.preventDefault();
+    const inputName = event.target.username.value;
+    const url = `https://api.agify.io?name=${inputName}`;
     fetch(url)
       .then((resp) => resp.json())
       .then((data) => {
-        setList(data.age);
+        setResult(data.age);
       });
   }
 
   return (
     <div>
-      <input />
-      <button onClick={handleClick}>GO</button>
-      <p>{list}</p>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="What's your Name?"
+          name="username"
+          id="username"
+        />
+        <button>GO</button>
+      </form>
+      <p>{result}</p>
     </div>
   );
 }
