@@ -12,9 +12,9 @@ export default function Nation() {
     fetch(url)
       .then((resp) => resp.json())
       .then((data) => {
-        setResultOne(data.country[0].country_id);
-        setResultTwo(data.country[1].country_id);
-        setResultThree(data.country[2].country_id);
+        setResultOne(data.country[0]?.country_id);
+        setResultTwo(data.country[1]?.country_id);
+        setResultThree(data.country[2]?.country_id);
       });
   }
 
