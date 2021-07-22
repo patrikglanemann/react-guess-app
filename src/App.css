@@ -1,3 +1,29 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: 80px auto 80px;
+  height: 100vh;
+}
+
+footer {
+  background-color: salmon;
+}
+.Footer__navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.Footer__navbar > a {
+  border: black solid 1px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.Footer__navbar > a:visited {
+  color: black;
+}
+
+.Footer__navbar > a.active {
+  background-color: rgb(250, 183, 175);
 }
