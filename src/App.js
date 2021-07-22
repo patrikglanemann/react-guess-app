@@ -7,22 +7,18 @@ import Gender from "./pages/gender.js";
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>App Name</h1>
-      </header>
-      <main>
-        <Switch>
-          <Route path="/nation">
-            <Nation />
-          </Route>
-          <Route path="/gender">
-            <Gender />
-          </Route>
-          <Route path="/">
-            <Age />
-          </Route>
-        </Switch>
-      </main>
+      <Switch>
+        <Route path="/nation">
+          <Nation />
+        </Route>
+        <Route path="/gender">
+          <Gender />
+        </Route>
+        <Route path="/">
+          <Age />
+        </Route>
+      </Switch>
+
       <footer>
         <nav className="Footer__navbar">
           <NavLink exact to="/">

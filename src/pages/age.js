@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Age() {
   const [result, setResult] = useState();
@@ -15,17 +15,24 @@ export default function Age() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="What's your Name?"
-          name="username"
-          id="username"
-        />
-        <button>GO</button>
-      </form>
-      <p>{result}</p>
-    </div>
+    <>
+      <header>
+        <h1>Age</h1>
+      </header>
+      <main>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="What's your Name?"
+              name="username"
+              id="username"
+            />
+            <button>GO</button>
+          </form>
+          <p>{result}</p>
+        </div>
+      </main>
+    </>
   );
 }

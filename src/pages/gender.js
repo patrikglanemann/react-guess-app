@@ -1,3 +1,12 @@
 export default function Gender() {
-  return <div>Gender</div>;
+  return (
+    <>
+      <header>
+        <h1>Gender</h1>
+      </header>
+      <main>
+        <div></div>
+      </main>
+    </>
+  );
 }
